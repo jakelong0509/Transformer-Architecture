@@ -1,4 +1,5 @@
 import numpy as np
+import os
 
 # Xavier initializer
 def Xavier(dimension):

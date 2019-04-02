@@ -1,5 +1,8 @@
 import numpy as np
-from .. import helperFunctions as hF
+import os
+os.chdir("..")
+print(os.getcwd())
+
 
 class EmbeddingLayer:
     def __init__(self, input_dim, output_dim, no_context, batch_size, bias = True):
@@ -29,5 +32,3 @@ class EmbeddingLayer:
             x = np.matmul(np.transpose(self._W["W"+str(i+1)]), x)
             if self._bias:
                 x = x + self._b["b"+str(i+1)]
-
-        y = softmax(x)
