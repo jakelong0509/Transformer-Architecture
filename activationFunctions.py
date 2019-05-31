@@ -1,5 +1,7 @@
 import numpy as np
 
-def softmax():
+def sigmoid(Z):
+    return 1/(1+np.exp(-Z))
 
-def softmax_backprop():
+def backward_sigmoid(a):
+    return a * (1 - a)
